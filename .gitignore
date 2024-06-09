@@ -1,0 +1,48 @@
+# Archivos temporales generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorio de archivos compilados
+/build
+
+# Archivos de caché y dependencias de Node.js
+/node_modules
+
+# Archivos de caché de NPM (elimina este si estás utilizando Yarn)
+.npm
+
+# Archivos de caché de Yarn (elimina este si estás utilizando NPM)
+.yarn
+yarn-error.log
+
+# Carpeta de archivos compilados de TypeScript
+/out
+
+# Carpeta de archivos compilados de JavaScript
+/dist
+
+# Carpeta de archivos compilados de producción
+/build
+
+# Carpeta de archivos compilados de desarrollo
+/.next
+
+# Archivos de configuración específicos del entorno local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de caché y archivos compilados de IDEs y editores
+.idea/
+.vscode/
+*.code-workspace
+
+# Archivos de configuración y caché de Jupyter Notebook
+.ipynb_checkpoints/
+
+# Otros archivos temporales o compilados
+*.log
+*.bak
+*.lock
+*.min.*
