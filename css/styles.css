@@ -1,0 +1,329 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mayor contraste */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* Enviar al fondo */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Asegura que esté por encima del fondo */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.logo a,
+nav a {
+    text-decoration: none;
+    color: rgb(246, 244, 244);
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold; /* Aquí se establece el texto en negrita */
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en pantallas pequeñas */
+}
+
+nav a:hover,
+.logo a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 50px 20px;
+    position: relative; /* Asegura que esté por encima del fondo */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.main-text {
+    font-size: 1em; /* Tamaño de fuente más grande */
+    margin-bottom: 50px; /* Agrega un poco de espacio debajo del texto */
+    font-style: normal;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Asegura que el botón ocupe todo el ancho disponible */
+    margin-top: 20px; /* Agrega un espacio superior al botón */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+    .logo a {
+        font-size: 20px; /* Reduce el tamaño del texto del logo en pantallas pequeñas */
+    }
+
+    nav a {
+        margin: 2px;
+        padding: 8px; /* Ajusta el padding en los enlaces de navegación */
+        font-size: 14px; /* Reduce el tamaño del texto en los enlaces de navegación */
+    }
+
+    main {
+        padding: 30px 10px; /* Reduce el padding en el contenido principal */
+    }
+
+    button {
+        width: 100%; /* Asegura que el botón se ajuste al ancho en pantallas pequeñas */
+    }
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    max-width: 400px; /* Ajustar el ancho máximo para evitar que se vean muy alargados */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: rgba(119, 127, 142, 0.8); /* Fondo del footer */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
+    margin-top: 20px; /* Agrega espacio entre el botón y el footer */
+}
+
+.social-icons {
+    margin-top: 15px; /* Espacio superior para separar el texto de los iconos */
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espacio horizontal entre los iconos */
+}
+
+.social-icons img {
+    width: 30px; /* Tamaño de los iconos */
+    height: 30px;
+}
+.cert-item img {
+    max-width: 10%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+}
+
+.transparent-text {
+    color: transparent;
+}
+
+.image-container {
+    position: absolute;
+    top: 45%; /* Ajusta la posición vertical según sea necesario */
+    right: 15%;
+    transform: translateY(-50%);
+    width: 23%; /* Ajusta el tamaño de la imagen según sea necesario */
+    max-height: 70vh; /* Altura máxima del contenedor de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    text-align: center; /* Centra horizontalmente la imagen */
+    border-radius: 50%; /* Crea un efecto de círculo alrededor de la imagen */
+}
+
+.image-container img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: none; /* Restablece la altura máxima de la imagen */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: inline-block; /* Evita el espacio adicional debajo de la imagen */
+    vertical-align: middle; /* Centra verticalmente la imagen */
+    border-radius: 50%; /* Crea un efecto de círculo alrededor de la imagen */
+}
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-left: 20px; /* Agrega un margen a la izquierda para mover el contenedor */
+}
+
+.info-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Negro semi-transparente */
+    color: #fff; /* Letra blanca */
+    padding: 20px;
+    border-radius: 8px;
+    flex-grow: 1;
+    border: 1px solid #ddd;
+}
+
+.info-box img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.info-box p {
+    margin-top: 0;
+}
+
+.resource-list {
+    margin-top: 20px;
+}
+
+.resource-list ul {
+    padding: 0;
+    margin: 0;
+}
+
+.resource-list ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.resource-list ul li a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.resource-list ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilos para la imagen a la derecha */
+.image-right {
+    position: absolute;
+    top: 4%;
+    right: 10%;
+    max-width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
+    border-radius: 80px;
+    border-color: black;
+    margin-top: 20px; /* Ajusta el margen superior */
+    border: 5px solid black;
+}
+        /* Estilos para la imagen a la derecha */
+        .image-right-2 {
+    position: absolute;
+    top: 52%;
+    right: 5%;
+    max-width: 350px; /* Ajusta el tamaño de la imagen según sea necesario */
+    border-radius: 8px;
+    border-radius: 50%; /* Convierte la imagen en un círculo */
+    margin-top: 20px; /* Ajusta el margen superior */
+    border: 5px solid black;
+}
+.cert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(160, 36, 36, 0.1);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    color: #fff; /* Texto blanco */
+}
+
+.cert-card img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%; /* Hace las imágenes redondeadas */
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción sin recortarse */
+}
+
+.cert-details {
+    flex-grow: 1;
+}
+
+.cert-details h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.cert-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.cert-details ul li {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.cert-details ul li a {
+    color: inherit; /* Mantiene el color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.cert-details ul li a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
