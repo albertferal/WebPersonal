@@ -327,3 +327,82 @@ footer {
 .cert-details ul li a:hover {
     text-decoration: underline; /* Añade subrayado al pasar el ratón */
 }
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .project {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(100% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project-container {
+        padding: 10px;
+    }
+
+    .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
