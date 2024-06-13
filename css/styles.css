@@ -26,7 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    position: relative; /* Asegura que esté por encima del fondo */
+    position: relative;
     flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
@@ -39,8 +39,7 @@ nav a {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     transition: background-color 0.3s;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold; /* Aquí se establece el texto en negrita */
+    font-weight: bold; /* Texto en negrita */
 }
 
 nav {
@@ -55,7 +54,7 @@ nav a:hover,
 
 main {
     padding: 50px 20px;
-    position: relative; /* Asegura que esté por encima del fondo */
+    position: relative;
     text-align: left; /* Alinea el texto a la izquierda */
 }
 
@@ -96,45 +95,12 @@ button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: block; /* Asegura que el botón ocupe todo el ancho disponible */
-    margin-top: 20px; /* Agrega un espacio superior al botón */
+    display: block; /* Ocupa todo el ancho disponible */
+    margin-top: 20px; /* Espacio superior al botón */
 }
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-@media (max-width: 600px) {
-    .logo a {
-        font-size: 20px; /* Reduce el tamaño del texto del logo en pantallas pequeñas */
-    }
-
-    nav a {
-        margin: 2px;
-        padding: 8px; /* Ajusta el padding en los enlaces de navegación */
-        font-size: 14px; /* Reduce el tamaño del texto en los enlaces de navegación */
-    }
-
-    main {
-        padding: 30px 10px; /* Reduce el padding en el contenido principal */
-    }
-
-    button {
-        width: 100%; /* Asegura que el botón se ajuste al ancho en pantallas pequeñas */
-    }
-}
-@media (max-width: 1024px) {
-    .image-right,
-    .image-right-2 {
-        display: none; /* Ocultar las imágenes en tabletas */
-    }
-}
-
-@media (max-width: 600px) {
-    .image-right,
-    .image-right-2 {
-        display: none; /* Ocultar las imágenes en dispositivos móviles */
-    }
 }
 
 .form-group input[type="text"],
@@ -161,7 +127,7 @@ footer {
     bottom: 0;
     width: 100%;
     box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
-    margin-top: 20px; /* Agrega espacio entre el botón y el footer */
+    margin-top: 20px; /* Espacio entre el botón y el footer */
 }
 
 .social-icons {
@@ -178,6 +144,7 @@ footer {
     width: 30px; /* Tamaño de los iconos */
     height: 30px;
 }
+
 .cert-item img {
     max-width: 10%; /* La imagen se ajustará al ancho del contenedor */
     height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
@@ -207,6 +174,7 @@ footer {
     vertical-align: middle; /* Centra verticalmente la imagen */
     border-radius: 50%; /* Crea un efecto de círculo alrededor de la imagen */
 }
+
 .container {
     position: relative;
     display: flex;
@@ -272,8 +240,8 @@ footer {
     margin-top: 20px; /* Ajusta el margen superior */
     border: 1px solid rgb(255, 255, 255);
 }
-        /* Estilos para la imagen a la derecha */
-        .image-right-2 {
+
+.image-right-2 {
     position: absolute;
     top: 52%;
     right: 5%;
@@ -283,6 +251,7 @@ footer {
     margin-top: 20px; /* Ajusta el margen superior */
     border: 1px solid rgb(255, 255, 255);
 }
+
 .cert-grid {
     display: flex;
     flex-direction: column;
@@ -300,7 +269,7 @@ footer {
     width: 100%;
     max-width: 600px;
     box-shadow: 0 2px 4px rgba(160, 36, 36, 0.1);
-    background-color:rgba(255, 255, 255, 0.1); /* Fondo negro semitransparente */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo negro semitransparente */
     color: #fff; /* Texto blanco */
 }
 
@@ -323,7 +292,8 @@ footer {
 
 .cert-details ul {
     list-style-type: none;
-    padding: 0;
+    padding
+    : 0;
     margin: 10px 0 0 0;
 }
 
@@ -384,12 +354,18 @@ footer {
 .project a:hover {
     text-decoration: underline;
 }
-
 /* Media Queries for Responsiveness */
 
 @media (max-width: 1200px) {
     .project {
         flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .image-right,
+    .image-right-2 {
+        display: none; /* Ocultar las imágenes en tabletas */
     }
 }
 
@@ -408,6 +384,8 @@ footer {
     nav a {
         display: block;
         margin: 10px 0;
+        padding: 8px; /* Ajusta el padding en los enlaces de navegación */
+        font-size: 14px; /* Reduce el tamaño del texto en los enlaces de navegación */
     }
 
     .project-container {
@@ -418,9 +396,7 @@ footer {
         width: 100%;
         margin: 10px 0;
     }
-}
 
-@media (max-width: 600px) {
     .image-container {
         position: static; /* Cambia la posición de absoluta a estática */
         width: 80%; /* Ajusta el ancho al 80% del contenedor */
@@ -434,6 +410,23 @@ footer {
         display: block; /* Elimina el espacio adicional debajo de la imagen */
         margin: 10px auto 0; /* Centra horizontalmente y añade margen superior */
         border-radius: 50%; /* Crea un efecto de círculo alrededor de la imagen */
+    }
+
+    .logo a {
+        font-size: 20px; /* Reduce el tamaño del texto del logo en pantallas pequeñas */
+    }
+
+    main {
+        padding: 30px 10px; /* Reduce el padding en el contenido principal */
+    }
+
+    button {
+        width: 100%; /* Asegura que el botón se ajuste al ancho en pantallas pequeñas */
+    }
+
+    .image-right,
+    .image-right-2 {
+        display: none; /* Ocultar las imágenes en dispositivos móviles */
     }
 }
 
