@@ -123,6 +123,19 @@ button:hover {
         width: 100%; /* Asegura que el botón se ajuste al ancho en pantallas pequeñas */
     }
 }
+@media (max-width: 1024px) {
+    .image-right,
+    .image-right-2 {
+        display: none; /* Ocultar las imágenes en tabletas */
+    }
+}
+
+@media (max-width: 600px) {
+    .image-right,
+    .image-right-2 {
+        display: none; /* Ocultar las imágenes en dispositivos móviles */
+    }
+}
 
 .form-group input[type="text"],
 .form-group textarea {
@@ -257,7 +270,7 @@ footer {
     border-radius: 80px;
     border-color: black;
     margin-top: 20px; /* Ajusta el margen superior */
-    border: 5px solid black;
+    border: 1px solid rgb(255, 255, 255);
 }
         /* Estilos para la imagen a la derecha */
         .image-right-2 {
@@ -268,7 +281,7 @@ footer {
     border-radius: 8px;
     border-radius: 50%; /* Convierte la imagen en un círculo */
     margin-top: 20px; /* Ajusta el margen superior */
-    border: 5px solid black;
+    border: 1px solid rgb(255, 255, 255);
 }
 .cert-grid {
     display: flex;
@@ -406,3 +419,22 @@ footer {
         margin: 10px 0;
     }
 }
+
+@media (max-width: 600px) {
+    .image-container {
+        position: static; /* Cambia la posición de absoluta a estática */
+        width: 80%; /* Ajusta el ancho al 80% del contenedor */
+        max-width: 200px; /* Establece un ancho máximo para controlar el tamaño */
+        margin: 100px auto 20px; /* Centra horizontalmente y añade margen superior e inferior */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        display: block; /* Elimina el espacio adicional debajo de la imagen */
+        margin: 10px auto 0; /* Centra horizontalmente y añade margen superior */
+        border-radius: 50%; /* Crea un efecto de círculo alrededor de la imagen */
+    }
+}
+
+
